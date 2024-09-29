@@ -1,0 +1,169 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("static/dictionary.gif") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Georgia', serif;
+    color: #333;
+    transition: background 0.5s ease-in-out;
+}
+
+
+.container {
+    max-width: 600px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    border: 1px solid #d3d3d3;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+}
+
+
+.searchBar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.searchBar input {
+    flex: 1;
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    outline: none;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.searchBar input:focus {
+    border-color: #8b4513;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(139, 69, 19, 0.4);
+}
+
+.searchBar button {
+    padding: 15px 20px;
+    background-color: #8b4513;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.searchBar button:hover {
+    background-color: blue;
+    transform: translateY(-2px);
+}
+
+
+.text {
+    margin-top: 35px;
+    padding: 25px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
+}
+
+.text h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.text p {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #2c3e50;
+    line-height: 1.5;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    animation-delay: 0.8s;
+}
+
+.text p span {
+    color: #444;
+    font-style: italic;
+}
+
+.text a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: brown;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 50px;
+    position: relative;
+    transition: background-color 0.3s ease, transform 0.2s;
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+    animation-delay: 1s;
+}
+
+.text a:hover {
+    background-color: blue;
+    transform: scale(1.05);
+}
+
+
+nav {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: #fff;
+    text-align: center;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease;
+}
+
+nav:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    nav {
+        font-size: 24px;
+    }
+}
